@@ -2,7 +2,7 @@ clear all
 close all
 clc
 
-A = rgb2gray(imread('test.jpg'));
+A = rgb2gray(imread('img/test.jpg'));
 [R,C]=size(A);
 
 % Definisco una serie di pattern, tutti quadrati 14x14
