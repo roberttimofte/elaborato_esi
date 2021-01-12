@@ -13,3 +13,4 @@ Altrimenti se tipo trovi un pixel blu e accanto un pixel nero, allora forse c'è
 - https://github.com/matteomarzio/ESI-Progetto-Difetti
 - https://www.cottonworks.com/resources/defects-glossary/
 - https://www.youtube.com/watch?v=O5uDOsm18Bw&t=61s
+- https://www.youtube.com/watch?v=0Mr_GVe6WiE&t=14s
