@@ -14,3 +14,5 @@ Altrimenti se tipo trovi un pixel blu e accanto un pixel nero, allora forse c'è
 - https://www.cottonworks.com/resources/defects-glossary/
 - https://www.youtube.com/watch?v=O5uDOsm18Bw&t=61s
 - https://www.youtube.com/watch?v=0Mr_GVe6WiE&t=14s
+- https://www.youtube.com/watch?v=Zy3lmkxlSY0
+- https://www.youtube.com/watch?v=TlU8f8VeEhU&feature=youtu.be
