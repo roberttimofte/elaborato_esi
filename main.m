@@ -83,7 +83,7 @@ figure, imagesc(mask)
 
 % anche la dimensione del disco può influenzare il risultato, un disco
 % troppo grande potrebbe erodere troppa informazione
-se = strel('disk',3); 
+se = strel('disk',3);
 mask2 = imopen(mask,se);
 figure, imagesc(mask2);
 
