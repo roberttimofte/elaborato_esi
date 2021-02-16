@@ -5,7 +5,11 @@
 Se il punto ha un colore simile alla media (con un range di errore dato dall'ombra magari) e simile ai suoi pixel vicini allora è ok.
 Altrimenti se tipo trovi un pixel blu e accanto un pixel nero, allora forse c'è un difetto.
 - rendere l immagine più "sharp" per evidenziarne i difetti perchè rendendola piu sharp si evidenziano gli edge.
-- implementare la scaletta del file lab6, controllare su moodle se c'è una soluzione dell'esercizio
+
+## note
+
+- il file lab6.m è da utilizzare come spunto, il file di riferimento per il progetto è main.m
+- glp.m è un file utilizzato da lab6.m
 
 ## risorse
 - https://it.mathworks.com/help/images/ref/graythresh.html
