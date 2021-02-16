@@ -1,4 +1,4 @@
-%% lab6 - Esercizio 2 - Analisi delle tessiture, dove si trova il difetto? 
+%% lab6 - Esercizio 2 - Analisi delle tessiture, dove si trova il difetto?
 % Utilizzare in combinazione filtro passa-basso e metodo di otsu per
 % ottenere la porzione di tessitura danneggiata. 
 
