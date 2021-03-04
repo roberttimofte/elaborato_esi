@@ -7,7 +7,14 @@ clear all
 close all
 clc
 
-A = rgb2gray(imread('img/test.jpg'));
+% Utilizzare queste righe per analizzare tutte le immagini, bisogna
+% togliere il commento dall'end presente nell'ultima riga dello script
+%Images = dir('img/*.jpg');
+%for file=1:length(Images)
+%image = strcat('img/',Images(file).name);
+%A = rgb2gray(imread(image));
+
+A = rgb2gray(imread('img/img1.jpg'));
 [R,C]=size(A);
 
 % Definisco una serie di pattern, tutti quadrati 14x14.
@@ -106,3 +113,5 @@ A1(mask2)=255;
 Af=cat(3,A1,A,A);
 figure;
 imshowpair(A,Af,'montage')
+
+%end
