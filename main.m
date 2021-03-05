@@ -9,12 +9,12 @@ clc
 
 % Utilizzare queste righe per analizzare tutte le immagini, bisogna
 % togliere il commento dall'end presente nell'ultima riga dello script
-%Images = dir('img/*.jpg');
-%for file=1:length(Images)
-%image = strcat('img/',Images(file).name);
-%A = rgb2gray(imread(image));
+Images = dir('img/*.jpg');
+for file=1:length(Images)
+image = strcat('img/',Images(file).name);
+A = rgb2gray(imread(image));
 
-A = rgb2gray(imread('img/img1.jpg'));
+%A = rgb2gray(imread('img/img1.jpg'));
 [R,C]=size(A);
 
 % Definisco una serie di pattern, tutti quadrati 14x14.
@@ -62,18 +62,19 @@ c = c(13:end-13,13:end-13); % elimino il bordo creato dal padding, size(pattern)
 %figure, imagesc(abs(c)), colorbar
 c=abs(c);
 
-m = 0; % valore che contiene la media di tutti i valori in c
-[I,J] = size(c);
-
-for i=1:I
-    for j=1:J
-        m = m + c(i,j);
-    end
-end
-
 % utilizzo m come soglia per fare la maschera, non funziona in tutti i casi
 % però è già qualcosa
-m = m/(I*J); 
+m = mean(c(:));
+[I,J] = size(c);
+
+% si può utilizzare al posto del comando mean
+%m = 0; % valore che contiene la media di tutti i valori in c
+%for i=1:I
+%    for j=1:J
+%        m = m + c(i,j);
+%    end
+%end
+%m = m/(I*J); 
              
 % selezioniamo una serie di valori che hanno cross-correlazione inferiore
 % ad una soglia, otteniamo una maschera che contiene valori 1 o 0 in base
@@ -114,4 +115,4 @@ Af=cat(3,A1,A,A);
 figure;
 imshowpair(A,Af,'montage')
 
-%end
+end
