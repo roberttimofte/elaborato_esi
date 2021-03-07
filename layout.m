@@ -79,14 +79,16 @@ function analizzabutton_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 index = get(handles.imgpopmenu,'Value');
-imgs = get(handles.imgpopmenu,'String');
-imgName = imgs{index};
-[ImageDefects] = main(imgName);
-figure; imshow(ImageDefects)
+    imgs = get(handles.imgpopmenu,'String');
+    imgName = imgs{index};
+if(imgName ~= "")
+    [ImageDefects] = main(imgName);
+    figure; imshow(ImageDefects)
 
-set(gcf,'MenuBar','none')
-set(gca,'DataAspectRatioMode','auto')
-set(gca,'Position',[0 0 1 1])
+    set(gcf,'MenuBar','none')
+    set(gca,'DataAspectRatioMode','auto')
+    set(gca,'Position',[0 0 1 1])
+end
 
 
 % --- Executes on selection change in imgpopmenu.
