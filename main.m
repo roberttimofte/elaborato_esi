@@ -3,18 +3,15 @@
 % Emanuele Feola - VR437205
 % Giacomo Mirandola - VR429611
 
-clear all
-close all
-clc
+function [ImageDefects] = main(img)
 
 % Utilizzare queste righe per analizzare tutte le immagini, bisogna
 % togliere il commento dall'end presente nell'ultima riga dello script
-Images = dir('img/*.jpg');
-for file=1:length(Images)
-image = strcat('img/',Images(file).name);
+
+image = strcat('img/', img);
+image = strcat(image, '.jpg');
 A = rgb2gray(imread(image));
 
-%A = rgb2gray(imread('img/img1.jpg'));
 [R,C]=size(A);
 
 % Definisco una serie di pattern, tutti quadrati 14x14.
@@ -112,7 +109,7 @@ A=A(6:end-7,6:end-7); % Passo da 512x512 a 500x500, togliamo l'effetto bordo
 A1 = A;
 A1(mask2)=255;
 Af=cat(3,A1,A,A);
-figure;
-imshowpair(A,Af,'montage')
+
+ImageDefects=Af;
 
 end
