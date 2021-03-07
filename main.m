@@ -9,7 +9,6 @@ clc
 % Utilizzare queste righe per analizzare tutte le immagini, bisogna
 % togliere il commento dall'end presente nell'ultima riga dello script
 image = strcat('img/', img);
-image = strcat(image, '.jpg');
 A = rgb2gray(imread(image));
 
 [R,C]=size(A);

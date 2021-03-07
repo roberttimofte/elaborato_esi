@@ -58,6 +58,17 @@ handles.output = hObject;
 % Update handles structure
 guidata(hObject, handles);
 
+% Popola il popupmenu con le immagini nella cartella in modo dinamico
+array = {''};
+Images = dir('img/*.jpg');
+for file=1:length(Images)
+    array = [array, Images(file).name];
+end
+% natsort serve per ordinare gli elementi
+array = natsortfiles(array);
+set(handles.imgpopmenu,'string',array)
+
+
 % UIWAIT makes layout wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
@@ -79,8 +90,8 @@ function analizzabutton_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 index = get(handles.imgpopmenu,'Value');
-    imgs = get(handles.imgpopmenu,'String');
-    imgName = imgs{index};
+imgs = get(handles.imgpopmenu,'String');
+imgName = imgs{index};
 if(imgName ~= "")
     [ImageDefects] = main(imgName);
     figure; imshow(ImageDefects)
@@ -88,6 +99,8 @@ if(imgName ~= "")
     set(gcf,'MenuBar','none')
     set(gca,'DataAspectRatioMode','auto')
     set(gca,'Position',[0 0 1 1])
+    set(gcf, 'Position', get(0, 'Screensize'));
+
 end
 
 
@@ -107,7 +120,6 @@ if(imgName ~= "")
     % Mostro l'immagine sorgente
     axes(handles.axes2);
     imageSource = strcat('img/', imgName);
-    imageSource = strcat(imageSource, '.jpg');
     imshow(imageSource)
 
     % Mostro l'immagine con i difetti

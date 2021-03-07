@@ -58,6 +58,14 @@ handles.output = hObject;
 % Update handles structure
 guidata(hObject, handles);
 
+% 
+array = {};
+Images = dir('img/*.jpg');
+for file=1:length(Images)
+    array = [array, Images(file).name];
+    set(handles.imgpopmenu,'string',array)
+end
+
 % UIWAIT makes layout wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
@@ -81,8 +89,14 @@ function analizzabutton_Callback(hObject, eventdata, handles)
 index = get(handles.imgpopmenu,'Value');
 imgs = get(handles.imgpopmenu,'String');
 imgName = imgs{index};
-[ImageDefects] = main(imgName);
-figure; imshow(ImageDefects, "dsa)
+if(imgName ~= "")
+    [ImageDefects] = main(imgName);
+    figure; imshow(ImageDefects)
+
+    set(gcf,'MenuBar','none')
+    set(gca,'DataAspectRatioMode','auto')
+    set(gca,'Position',[0 0 1 1])
+end
 
 
 % --- Executes on selection change in imgpopmenu.
@@ -97,19 +111,27 @@ index = get(handles.imgpopmenu,'Value');
 imgs = get(handles.imgpopmenu,'String');
 imgName = imgs{index};
 
-% Mostro l'immagine sorgente
-axes(handles.axes2);
-imageSource = strcat('img/', imgName);
-imageSource = strcat(imageSource, '.jpg');
-imshow(imageSource)
+if(imgName ~= "")
+    % Mostro l'immagine sorgente
+    axes(handles.axes2);
+    imageSource = strcat('img/', imgName);
+    imageSource = strcat(imageSource, '.jpg');
+    imshow(imageSource)
 
-% Mostro l'immagine con i difetti
-axes(handles.axes3);
-[ImageDefects] = main(imgName);
-imshow(ImageDefects);
+    % Mostro l'immagine con i difetti
+    axes(handles.axes3);
+    [ImageDefects] = main(imgName);
+    imshow(ImageDefects);
+else
+    % Rimuovo le immagini precedenti
+    axes(handles.axes2);
+    hold off;
+    cla reset;
+    axes(handles.axes3);
+    hold off;
+    cla reset;
+end
 
-axis off
-axis image
 
 % --- Executes during object creation, after setting all properties.
 function imgpopmenu_CreateFcn(hObject, eventdata, handles)
