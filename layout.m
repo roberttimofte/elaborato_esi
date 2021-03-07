@@ -81,20 +81,12 @@ function analizzabutton_Callback(hObject, eventdata, handles)
 index = get(handles.imgpopmenu,'Value');
 imgs = get(handles.imgpopmenu,'String');
 imgName = imgs{index};
-
-% Mostro l'immagine sorgente
-axes(handles.axes2);
-imageSource = strcat('img/', imgName);
-imageSource = strcat(imageSource, '.jpg');
-imshow(imageSource)
-
-% Mostro l'immagine con i difetti
-axes(handles.axes3);
 [ImageDefects] = main(imgName);
-imshow(ImageDefects);
+figure; imshow(ImageDefects)
 
-axis off
-axis image
+set(gcf,'MenuBar','none')
+set(gca,'DataAspectRatioMode','auto')
+set(gca,'Position',[0 0 1 1])
 
 
 % --- Executes on selection change in imgpopmenu.
@@ -105,7 +97,30 @@ function imgpopmenu_Callback(hObject, eventdata, handles)
 
 % Hints: contents = cellstr(get(hObject,'String')) returns imgpopmenu contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from imgpopmenu
+index = get(handles.imgpopmenu,'Value');
+imgs = get(handles.imgpopmenu,'String');
+imgName = imgs{index};
 
+if(imgName ~= "")
+    % Mostro l'immagine sorgente
+    axes(handles.axes2);
+    imageSource = strcat('img/', imgName);
+    imageSource = strcat(imageSource, '.jpg');
+    imshow(imageSource)
+
+    % Mostro l'immagine con i difetti
+    axes(handles.axes3);
+    [ImageDefects] = main(imgName);
+    imshow(ImageDefects);
+else
+    % Rimuovo le immagini precedenti
+    axes(handles.axes2);
+    hold off;
+    cla reset;
+    axes(handles.axes3);
+    hold off;
+    cla reset;
+end
 
 
 % --- Executes during object creation, after setting all properties.
