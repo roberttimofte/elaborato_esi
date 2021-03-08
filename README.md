@@ -6,6 +6,10 @@ Se il punto ha un colore simile alla media (con un range di errore dato dall'omb
 Altrimenti se tipo trovi un pixel blu e accanto un pixel nero, allora forse c'è un difetto.
 - rendere l immagine più "sharp" per evidenziarne i difetti perchè rendendola piu sharp si evidenziano gli edge.
 
+## note
+
+- per eseguire il programma bisogna runnare il file <i>layout.m</i>
+
 ## risorse
 - https://it.mathworks.com/help/images/ref/graythresh.html
 - https://www.youtube.com/watch?v=QDpkjsBGLRo

@@ -120,7 +120,7 @@ if(imgName ~= "")
     % Mostro l'immagine sorgente
     axes(handles.axes2);
     imageSource = strcat('img/', imgName);
-    imshow(imageSource)
+    imshow(imageSource);
 
     % Mostro l'immagine con i difetti
     axes(handles.axes3);
