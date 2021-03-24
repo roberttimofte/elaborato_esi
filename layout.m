@@ -68,11 +68,6 @@ end
 array = natsortfiles(array);
 set(handles.imgpopmenu,'string',array)
 
-
-% UIWAIT makes layout wait for user response (see UIRESUME)
-% uiwait(handles.figure1);
-
-
 % --- Outputs from this function are returned to the command line.
 function varargout = layout_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
@@ -82,7 +77,6 @@ function varargout = layout_OutputFcn(hObject, eventdata, handles)
 
 % Get default command line output from handles structure
 varargout{1} = handles.output;
-
 
 % --- Executes on button press in analizzabutton.
 function analizzabutton_Callback(hObject, eventdata, handles)
@@ -103,7 +97,6 @@ if(imgName ~= "")
 
 end
 
-
 % --- Executes on selection change in imgpopmenu.
 function imgpopmenu_Callback(hObject, eventdata, handles)
 % hObject    handle to imgpopmenu (see GCBO)
@@ -120,7 +113,7 @@ if(imgName ~= "")
     % Mostro l'immagine sorgente
     axes(handles.axes2);
     imageSource = strcat('img/', imgName);
-    imshow(imageSource)
+    imshow(imageSource);
 
     % Mostro l'immagine con i difetti
     axes(handles.axes3);
@@ -135,7 +128,6 @@ else
     hold off;
     cla reset;
 end
-
 
 % --- Executes during object creation, after setting all properties.
 function imgpopmenu_CreateFcn(hObject, eventdata, handles)
