@@ -71,4 +71,26 @@ Ogni volta che un membro apportava modifiche alla sua branch locale, faceva il p
 
 > Zoom
 
+<<<<<<< HEAD
 Abbiamo utilizzato Zoom per confrontarci, fare il punto della situazione e decidere come procedere nello sviluppo del progetto.
+=======
+Abbiamo utilizzato Zoom per confrontarci, fare il punto della situazione e decidere come procedere nello sviluppo del progetto.
+
+
+
+## Risorse consultate
+
+> Risorse consulatate e utilizzate
+
+Abbiamo consultato molte risorse online tra forum di matlab e video di youtube per trovare una soluzione ai problemi riscontrati durante la progettazione e non:
+	- https://www.youtube.com/watch?v=zyxi_1OyZ2I&t=411s
+	- https://www.youtube.com/watch?v=h2_6FbMsQqU&t=542s
+	- https://www.youtube.com/watch?v=ugTxqLhb4h4
+	- https://www.youtube.com/watch?v=ChOT02fxQm4
+	- https://www.youtube.com/watch?v=0Mr_GVe6WiE&t=14s
+
+Video usati per  cercare di estrapolare informazioni utili e per trovare un'intuizione per il nostro problema:
+	- https://www.youtube.com/watch?v=QDpkjsBGLRo
+	- https://www.youtube.com/watch?v=Zy3lmkxlSY0
+	- https://www.youtube.com/watch?v=TlU8f8VeEhU
+>>>>>>> mirandola
