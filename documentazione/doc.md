@@ -87,6 +87,5 @@ Abbiamo consultato molte risorse online tra forum di matlab e video di youtube p
 
 Video usati per cercare di estrapolare informazioni utili e per trovare un'intuizione per il nostro problema:
 - https://www.youtube.com/watch?v=QDpkjsBGLRo
-
 - https://www.youtube.com/watch?v=Zy3lmkxlSY0
 - https://www.youtube.com/watch?v=TlU8f8VeEhU
