@@ -30,7 +30,7 @@ c = (c1+c2+c3+c4+c5+c6)/6;
 c = c(13:end-13,13:end-13); 
 c=abs(c);
 
-% calcolo il valore in base al quale impostata la maschera
+% calcolo il valore in base al quale imposto la maschera
 m = mean(c(:));
 
 % creo la maschera

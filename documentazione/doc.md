@@ -67,30 +67,26 @@ Quest'ultimo file inoltre, tramite l'utilizzo delle librerie citate prima, perme
 
 Per la condivisione, collaborazione e gestione del versionamento del progetto abbiamo scelto git, in particolare abbiamo creato una repository ospitata su Github (https://github.com/roberttimofte/elaborato_esi.git).
 La repository è composta di 4 branch diversi: una per ogni componente del gruppo, più il master che contiene le versioni stabili dell'elaborato, ovvero il merge dei 3 branch di sviluppo.
-Ogni volta che un membro apportava modifiche alla sua branch locale, faceva il push dei cambiamenti sulla repository online in modo che fossero disponibili anche agli altri.
+Ogni volta che un membro apportava modifiche al suo branch locale, faceva il push dei cambiamenti sulla repository online in modo che fossero disponibili anche agli altri.
 
 > Zoom
 
-<<<<<<< HEAD
-Abbiamo utilizzato Zoom per confrontarci, fare il punto della situazione e decidere come procedere nello sviluppo del progetto.
-=======
 Abbiamo utilizzato Zoom per confrontarci, fare il punto della situazione e decidere come procedere nello sviluppo del progetto.
 
 
 
-## Risorse consultate
-
-> Risorse consulatate e utilizzate
+## Risorse
 
 Abbiamo consultato molte risorse online tra forum di matlab e video di youtube per trovare una soluzione ai problemi riscontrati durante la progettazione e non:
-	- https://www.youtube.com/watch?v=zyxi_1OyZ2I&t=411s
-	- https://www.youtube.com/watch?v=h2_6FbMsQqU&t=542s
-	- https://www.youtube.com/watch?v=ugTxqLhb4h4
-	- https://www.youtube.com/watch?v=ChOT02fxQm4
-	- https://www.youtube.com/watch?v=0Mr_GVe6WiE&t=14s
 
-Video usati per  cercare di estrapolare informazioni utili e per trovare un'intuizione per il nostro problema:
-	- https://www.youtube.com/watch?v=QDpkjsBGLRo
-	- https://www.youtube.com/watch?v=Zy3lmkxlSY0
-	- https://www.youtube.com/watch?v=TlU8f8VeEhU
->>>>>>> mirandola
+- https://www.youtube.com/watch?v=zyxi_1OyZ2I&t=411s
+- https://www.youtube.com/watch?v=h2_6FbMsQqU&t=542s
+- https://www.youtube.com/watch?v=ugTxqLhb4h4
+- https://www.youtube.com/watch?v=ChOT02fxQm4
+- https://www.youtube.com/watch?v=0Mr_GVe6WiE&t=14s
+
+Video usati per cercare di estrapolare informazioni utili e per trovare un'intuizione per il nostro problema:
+- https://www.youtube.com/watch?v=QDpkjsBGLRo
+
+- https://www.youtube.com/watch?v=Zy3lmkxlSY0
+- https://www.youtube.com/watch?v=TlU8f8VeEhU
